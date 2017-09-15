@@ -75,8 +75,13 @@ public class phoneEmailWeb : MonoBehaviour {
 
 	public void Instagram_BlueWave ()
 	{
-		Application.OpenURL ("https://www.instagram.com/bluewaverp/");
+//		Application.OpenURL ("https://www.instagram.com/bluewaverp/");
+
+		Application.OpenURL ("instagram://user?username=bluewaverp");
+
 	}
+
+
 
 		
 	/* ------------------------------------------------------------------------- */
@@ -130,6 +135,11 @@ public class phoneEmailWeb : MonoBehaviour {
 	public void Phone_Elomuse ()
 	{
 		Application.OpenURL ("tel://4072699542");
+	}
+
+	public void Phone_Salus ()
+	{
+		Application.OpenURL("tel://9546083230");
 	}
 
 	/* ------------------------------------------------------------------------- */
@@ -250,6 +260,14 @@ public class phoneEmailWeb : MonoBehaviour {
 	public void Email_Elomuse()
 	{
 		string email = "Info@elomuse.com";
+		string subject = MyEscapeURL(" ");
+		string body = MyEscapeURL(" ");
+		Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
+	}
+
+	public void Email_Salus () 
+	{
+		string email = "nick@salusapp.net";
 		string subject = MyEscapeURL(" ");
 		string body = MyEscapeURL(" ");
 		Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
